@@ -1,0 +1,6 @@
+framework module Pods_test_sign_in_withj_apple {
+  umbrella header "Pods-test-sign-in-withj-apple-umbrella.h"
+
+  export *
+  module * { export * }
+}

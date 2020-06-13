@@ -13,9 +13,11 @@
 		2F95A4FE2494961D00308DEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F95A4FC2494961D00308DEC /* Main.storyboard */; };
 		2F95A5002494962000308DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F95A4FF2494962000308DEC /* Assets.xcassets */; };
 		2F95A5032494962000308DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F95A5012494962000308DEC /* LaunchScreen.storyboard */; };
+		EF6ED08019030AE93211F673 /* Pods_test_sign_in_withj_apple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FE25A4191AAAA3F1CEAF18 /* Pods_test_sign_in_withj_apple.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		116AC2A5AE3D061A33783D48 /* Pods-test-sign-in-withj-apple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-sign-in-withj-apple.release.xcconfig"; path = "Pods/Target Support Files/Pods-test-sign-in-withj-apple/Pods-test-sign-in-withj-apple.release.xcconfig"; sourceTree = "<group>"; };
 		2F95A4F32494961D00308DEC /* test-sign-in-with-apple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-sign-in-with-apple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F95A4F62494961D00308DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F95A4F82494961D00308DEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		2F95A4FF2494962000308DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F95A5022494962000308DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F95A5042494962000308DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		648C45CBF6ABA3D20B7CE4D4 /* Pods-test-sign-in-withj-apple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-sign-in-withj-apple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test-sign-in-withj-apple/Pods-test-sign-in-withj-apple.debug.xcconfig"; sourceTree = "<group>"; };
+		E1FE25A4191AAAA3F1CEAF18 /* Pods_test_sign_in_withj_apple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_sign_in_withj_apple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6ED08019030AE93211F673 /* Pods_test_sign_in_withj_apple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				2F95A4F52494961D00308DEC /* test-sign-in-withj-apple */,
 				2F95A4F42494961D00308DEC /* Products */,
+				8F3EC7755119E1E3E16899B4 /* Pods */,
+				D7DAC852387072F541903FDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "test-sign-in-withj-apple";
 			sourceTree = "<group>";
 		};
+		8F3EC7755119E1E3E16899B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				648C45CBF6ABA3D20B7CE4D4 /* Pods-test-sign-in-withj-apple.debug.xcconfig */,
+				116AC2A5AE3D061A33783D48 /* Pods-test-sign-in-withj-apple.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D7DAC852387072F541903FDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1FE25A4191AAAA3F1CEAF18 /* Pods_test_sign_in_withj_apple.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F95A5072494962000308DEC /* Build configuration list for PBXNativeTarget "test-sign-in-withj-apple" */;
 			buildPhases = (
+				CA61B06371857D9DBE390686 /* [CP] Check Pods Manifest.lock */,
 				2F95A4EF2494961D00308DEC /* Sources */,
 				2F95A4F02494961D00308DEC /* Frameworks */,
 				2F95A4F12494961D00308DEC /* Resources */,
+				191DF3AAF8E8B1908D2984AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		191DF3AAF8E8B1908D2984AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-test-sign-in-withj-apple/Pods-test-sign-in-withj-apple-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test-sign-in-withj-apple/Pods-test-sign-in-withj-apple-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA61B06371857D9DBE390686 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-test-sign-in-withj-apple-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F95A4EF2494961D00308DEC /* Sources */ = {
@@ -282,6 +355,7 @@
 		};
 		2F95A5082494962000308DEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 648C45CBF6ABA3D20B7CE4D4 /* Pods-test-sign-in-withj-apple.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +374,7 @@
 		};
 		2F95A5092494962000308DEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 116AC2A5AE3D061A33783D48 /* Pods-test-sign-in-withj-apple.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
