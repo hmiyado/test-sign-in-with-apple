@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F95A4F32494961D00308DEC /* test-sign-in-withj-apple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-sign-in-withj-apple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F95A4F32494961D00308DEC /* test-sign-in-with-apple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-sign-in-with-apple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F95A4F62494961D00308DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F95A4F82494961D00308DEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2F95A4FA2494961D00308DEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		2F95A4F42494961D00308DEC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2F95A4F32494961D00308DEC /* test-sign-in-withj-apple.app */,
+				2F95A4F32494961D00308DEC /* test-sign-in-with-apple.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +84,7 @@
 			);
 			name = "test-sign-in-withj-apple";
 			productName = "test-sign-in-withj-apple";
-			productReference = 2F95A4F32494961D00308DEC /* test-sign-in-withj-apple.app */;
+			productReference = 2F95A4F32494961D00308DEC /* test-sign-in-with-apple.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -291,8 +291,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.hmiyado.test-sign-in-withj-apple";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.hmiyado.test-sign-in-with-apple";
+				PRODUCT_NAME = "test-sign-in-with-apple";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -309,8 +309,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.hmiyado.test-sign-in-withj-apple";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.hmiyado.test-sign-in-with-apple";
+				PRODUCT_NAME = "test-sign-in-with-apple";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
