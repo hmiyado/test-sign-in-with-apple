@@ -8,6 +8,7 @@
 
 import AuthenticationServices
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -64,6 +65,12 @@ extension ViewController : ASAuthorizationControllerDelegate {
             nameLabel.text = "name: " + (fullName?.debugDescription ?? "")
             emailLabel.text = "email: " + (email ?? "")
         
+            AF
+                .request("https://google.com")
+                .response { response in
+                    self.logTextView.text = response.description
+                }
+
         case let passwordCredential as ASPasswordCredential:
         
             // Sign in using an existing iCloud Keychain credential.
@@ -72,6 +79,13 @@ extension ViewController : ASAuthorizationControllerDelegate {
 
             nameLabel.text = "name: " + username
             idLabel.text = "password: " + password
+
+            AF
+                .request("https://google.com")
+                .response { response in
+                    self.logTextView.text = response.description
+                }
+
         default:
             break
         }
