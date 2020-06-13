@@ -7,5 +7,5 @@ target 'test-sign-in-withj-apple' do
 
   # Pods for test-sign-in-withj-apple
   pod 'Alamofire', '~> 5.2'
-
+  pod 'SwiftJWT'
 end
