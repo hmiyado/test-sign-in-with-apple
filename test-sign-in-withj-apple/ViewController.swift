@@ -9,7 +9,7 @@
 import AuthenticationServices
 import UIKit
 import Alamofire
-//import SwiftJWT
+import SwiftJWT
 
 class ViewController: UIViewController {
 
@@ -68,13 +68,20 @@ extension ViewController : ASAuthorizationControllerDelegate {
             
             let code = appleIDCredential.authorizationCode!
             
+            // https://developer.apple.com/documentation/sign_in_with_apple/generate_and_validate_tokens
             let headers: HTTPHeaders = [
                 "Content-Type": "application/x-www-form-urlencoded"
             ]
             
+            let clientSecretHeader = Header(kid: "MHRB48MM8X")
+            let clientSecretClaim = ClientSecretClaim(iss: "C8DX3743C6", iat: Date(), exp: Date(timeIntervalSinceNow: 15777000))
+            var clientSecretUnsigned = JWT(header: clientSecretHeader, claims: clientSecretClaim)
+            let clientSecretSigner = JWTSigner.es256(privateKey: Data())
+            let clientSecretSigned = try! clientSecretUnsigned.sign(using: clientSecretSigner)
+            
             let parameters: [String: String] = [
                 "client_id": "com.github.hmiyado.test-sign-in-with-apple",
-                "client_secret": "",
+                "client_secret": clientSecretSigned,
                 "code": String.init(data: code, encoding: .utf8)!,
                 "grant_type": "authorization_code"
             ]
