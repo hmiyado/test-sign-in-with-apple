@@ -110,7 +110,10 @@ extension ViewController : ASAuthorizationControllerDelegate {
         let clientSecretHeader = Header(kid: "MHRB48MM8X")
         let clientSecretClaim = ClientSecretClaim(iss: "C8DX3743C6", iat: Date(), exp: Date(timeIntervalSinceNow: 15777000))
         var clientSecretUnsigned = JWT(header: clientSecretHeader, claims: clientSecretClaim)
-        let clientSecretSigner = JWTSigner.es256(privateKey: Data())
+        let bundle = Bundle.main
+        let privateKeyPath = bundle.path(forResource: "AuthKey_MHRB48MM8X", ofType: "p8")
+        let privateKey = try! Data(contentsOf: URL(fileURLWithPath: privateKeyPath!))
+        let clientSecretSigner = JWTSigner.es256(privateKey: privateKey)
         return try! clientSecretUnsigned.sign(using: clientSecretSigner)
     }
     

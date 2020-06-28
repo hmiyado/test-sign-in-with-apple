@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F50EB8224A87DD1008B01D2 /* ClientSecretClaim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F50EB8124A87DD1008B01D2 /* ClientSecretClaim.swift */; };
+		2F50EB8524A88F70008B01D2 /* AuthKey_MHRB48MM8X.p8 in Resources */ = {isa = PBXBuildFile; fileRef = 2F50EB8424A88F70008B01D2 /* AuthKey_MHRB48MM8X.p8 */; };
 		2F95A4F72494961D00308DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95A4F62494961D00308DEC /* AppDelegate.swift */; };
 		2F95A4F92494961D00308DEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95A4F82494961D00308DEC /* SceneDelegate.swift */; };
 		2F95A4FB2494961D00308DEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95A4FA2494961D00308DEC /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 		116AC2A5AE3D061A33783D48 /* Pods-test-sign-in-withj-apple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-sign-in-withj-apple.release.xcconfig"; path = "Pods/Target Support Files/Pods-test-sign-in-withj-apple/Pods-test-sign-in-withj-apple.release.xcconfig"; sourceTree = "<group>"; };
 		2F50EB8024A86FD9008B01D2 /* test-sign-in-with-apple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "test-sign-in-with-apple.entitlements"; sourceTree = "<group>"; };
 		2F50EB8124A87DD1008B01D2 /* ClientSecretClaim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSecretClaim.swift; sourceTree = "<group>"; };
+		2F50EB8424A88F70008B01D2 /* AuthKey_MHRB48MM8X.p8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AuthKey_MHRB48MM8X.p8; sourceTree = "<group>"; };
 		2F95A4F32494961D00308DEC /* test-sign-in-with-apple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-sign-in-with-apple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F95A4F62494961D00308DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F95A4F82494961D00308DEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F50EB8324A88E5A008B01D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2F50EB8424A88F70008B01D2 /* AuthKey_MHRB48MM8X.p8 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2F95A4EA2494961D00308DEC = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		2F95A4F52494961D00308DEC /* test-sign-in-withj-apple */ = {
 			isa = PBXGroup;
 			children = (
+				2F50EB8324A88E5A008B01D2 /* Resources */,
 				2F50EB8024A86FD9008B01D2 /* test-sign-in-with-apple.entitlements */,
 				2F95A4F62494961D00308DEC /* AppDelegate.swift */,
 				2F95A4F82494961D00308DEC /* SceneDelegate.swift */,
@@ -156,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F50EB8524A88F70008B01D2 /* AuthKey_MHRB48MM8X.p8 in Resources */,
 				2F95A5032494962000308DEC /* LaunchScreen.storyboard in Resources */,
 				2F95A5002494962000308DEC /* Assets.xcassets in Resources */,
 				2F95A4FE2494961D00308DEC /* Main.storyboard in Resources */,
