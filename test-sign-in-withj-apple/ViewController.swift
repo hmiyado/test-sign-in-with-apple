@@ -65,12 +65,25 @@ extension ViewController : ASAuthorizationControllerDelegate {
             idLabel.text = "id: " + userIdentifier
             nameLabel.text = "name: " + (fullName?.debugDescription ?? "")
             emailLabel.text = "email: " + (email ?? "")
+            
+            let code = appleIDCredential.authorizationCode!
+            
+            let headers: HTTPHeaders = [
+                "Content-Type": "application/x-www-form-urlencoded"
+            ]
+            
+            let parameters: [String: String] = [
+                "client_id": "com.github.hmiyado.test-sign-in-with-apple",
+                "client_secret": "",
+                "code": String.init(data: code, encoding: .utf8)!,
+                "grant_type": "authorization_code"
+            ]
         
             AF
-                .request("https://google.com")
-                .response { response in
-                    self.logTextView.text = response.description
-                }
+                .request("https://appleid.apple.com/auth/token", method: .post, parameters: parameters, headers: headers)
+                .responseString { response in
+                    self.logTextView.text = response.value as! String
+            }
 
         case let passwordCredential as ASPasswordCredential:
         
