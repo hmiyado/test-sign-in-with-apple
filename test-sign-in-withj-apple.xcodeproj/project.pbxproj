@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		116AC2A5AE3D061A33783D48 /* Pods-test-sign-in-withj-apple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-sign-in-withj-apple.release.xcconfig"; path = "Pods/Target Support Files/Pods-test-sign-in-withj-apple/Pods-test-sign-in-withj-apple.release.xcconfig"; sourceTree = "<group>"; };
+		2F50EB8024A86FD9008B01D2 /* test-sign-in-with-apple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "test-sign-in-with-apple.entitlements"; sourceTree = "<group>"; };
 		2F95A4F32494961D00308DEC /* test-sign-in-with-apple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-sign-in-with-apple.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F95A4F62494961D00308DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F95A4F82494961D00308DEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		2F95A4F52494961D00308DEC /* test-sign-in-withj-apple */ = {
 			isa = PBXGroup;
 			children = (
+				2F50EB8024A86FD9008B01D2 /* test-sign-in-with-apple.entitlements */,
 				2F95A4F62494961D00308DEC /* AppDelegate.swift */,
 				2F95A4F82494961D00308DEC /* SceneDelegate.swift */,
 				2F95A4FA2494961D00308DEC /* ViewController.swift */,
@@ -353,6 +355,7 @@
 			baseConfigurationReference = 648C45CBF6ABA3D20B7CE4D4 /* Pods-test-sign-in-withj-apple.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "test-sign-in-withj-apple/test-sign-in-with-apple.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C8DX3743C6;
 				INFOPLIST_FILE = "test-sign-in-withj-apple/Info.plist";
@@ -372,6 +375,7 @@
 			baseConfigurationReference = 116AC2A5AE3D061A33783D48 /* Pods-test-sign-in-withj-apple.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "test-sign-in-withj-apple/test-sign-in-with-apple.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C8DX3743C6;
 				INFOPLIST_FILE = "test-sign-in-withj-apple/Info.plist";
