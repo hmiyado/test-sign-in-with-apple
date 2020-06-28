@@ -72,16 +72,10 @@ extension ViewController : ASAuthorizationControllerDelegate {
             let headers: HTTPHeaders = [
                 "Content-Type": "application/x-www-form-urlencoded"
             ]
-            
-            let clientSecretHeader = Header(kid: "MHRB48MM8X")
-            let clientSecretClaim = ClientSecretClaim(iss: "C8DX3743C6", iat: Date(), exp: Date(timeIntervalSinceNow: 15777000))
-            var clientSecretUnsigned = JWT(header: clientSecretHeader, claims: clientSecretClaim)
-            let clientSecretSigner = JWTSigner.es256(privateKey: Data())
-            let clientSecretSigned = try! clientSecretUnsigned.sign(using: clientSecretSigner)
-            
+                        
             let parameters: [String: String] = [
                 "client_id": "com.github.hmiyado.test-sign-in-with-apple",
-                "client_secret": clientSecretSigned,
+                "client_secret": createClientSecret(),
                 "code": String.init(data: code, encoding: .utf8)!,
                 "grant_type": "authorization_code"
             ]
@@ -110,6 +104,14 @@ extension ViewController : ASAuthorizationControllerDelegate {
         default:
             break
         }
+    }
+    
+    private func createClientSecret() -> String {
+        let clientSecretHeader = Header(kid: "MHRB48MM8X")
+        let clientSecretClaim = ClientSecretClaim(iss: "C8DX3743C6", iat: Date(), exp: Date(timeIntervalSinceNow: 15777000))
+        var clientSecretUnsigned = JWT(header: clientSecretHeader, claims: clientSecretClaim)
+        let clientSecretSigner = JWTSigner.es256(privateKey: Data())
+        return try! clientSecretUnsigned.sign(using: clientSecretSigner)
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
